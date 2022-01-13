@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick wallet</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" ></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- SIDEBAR START-->
+    <div class="sidebar">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li title="Dashboard" class="Active"><a href="./index.html"><i class="las la-home"></i></a></li>
+                        <li title="Balance" ><a href="#"><i class="las la-wallet"></i></a></li>
+                        <li title="Todo"><a href="#"><i class="las la-tasks"></i></a></li>
+                        <li title="Profile"><a href="#"><i class="las la-user-alt"></i></a></li>
+                        <li title="Logout"><a href="#"><i class="las la-sign-out-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SIDEBAR END -->
+
+    <!-- MAIN CONTENT START-->
+    <div class="main">
+        <div class="container-fluid">
+
+            <!-- NAVBAR START-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand fw-bolder" href="#"><i class="las la-rainbow" style="font-size: 2rem;"></i> Company</a>
+                  <ul class="nav">
+                    <li class="searchBar">
+                        <form action="#" class="myForm">
+                            <input type="text" placeholder="Search">
+                            <button class="mybutton"><i class="las la-search"></i> </button>
+                        </form>
+                    </li>
+                      <li class="text-white messages"><i class="las la-sms"></i></li>
+                      <li class="text-white bell"><i class="las la-bell"></i></li>
+                      <li>   
+                        <div class="image img-fluid profile">
+                            <img src="./assets/images/profile-pic.jpeg" alt="">
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- NAVBAR END-->
+
+              <section class="mainContent">
+                <div class="container-fluid">
+                    <div class="row mt-3 mb-3">
+                        <div class="container-fluid">
+                            <div class="header text-white h3 fw-light">
+                                Welcome back Patrick!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- STATS COLUMN START -->
+                        <div class="col-lg-12 col-xl-8 col-md-12">
+                            
+                            <!-- CARDS START-->
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 pb-4 pt-1">
+                                    <div class="mycard shadow">
+                                        <div class="row">
+                                          <i class="las la-credit-card"></i>
+                                        </div>
+                                        <div class="row">
+                                            <p>Transfer via card number</p>
+                                        </div>
+                                        <div class="row">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-4 pb-4 pt-1">
+                                    <div class="mycard shadow">
+                                        <div class="row">
+                                            <i class="las la-exchange-alt"></i>
+                                        </div>
+                                        <div class="row">
+                                            <p>Transfer other banks</p>
+                                        </div>
+                                        <div class="row">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-4 pb-4 pt-1">
+                                    <div class="mycard shadow">
+                                        <div class="row">
+                                            <i class="las la-university"></i>
+                                        </div>
+                                        <div class="row">
+                                            <p>Transfer same bank</p>
+                                        </div>
+                                        <div class="row">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-4 pb-4 pt-1">
+                                    <div class="mycard shadow">
+                                        <div class="row">
+                                            <i class="las la-file-invoice-dollar"></i>
+                                        </div>
+                                        <div class="row">
+                                            <p>Transfer to other banks</p>
+                                        </div>
+                                        <div class="row">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARDS END -->
+
+                            <!-- CHART START-->
+                            <div class="row GRAPHS">
+
+                                <!--HEADERS START-->
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="header">
+                                            <p>Balance</p>
+                                            <h1>$1500</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="header mt-4">
+                                            <p>past 30 days</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--HEADERS END-->
+
+                                <!--#########################################-->
+
+                                <!----BAR CHART START-->
+                                <div class="row">
+                                    <div class="col myChart">
+                                        <canvas id="myChart">
+                                        </canvas>
+                                    </div>
+                                </div>
+                                <!----BAR CHART END-->
+
+
+
+                            </div>
+                            <!-- CHART END-->
+
+                            <!-- TRANSACTION HISTORY START-->
+                            <div class="row mt-5 history">
+                                <div class="col">
+
+                                    <!-- table caption-->
+                                    <!-- can be done inside the table-->
+                                    <div class="header">
+                                        <h2>History</h2>
+                                        <p>last 6 months</p>
+                                    </div>
+                                    <div class="table mt-4">
+                                        <table>
+                                            <!--- Spongebob -->
+                                            <tr title="Spongebob Squarepants">
+                                                <td>
+                                                    <span>
+                                                        <img src="./assets/images/spongebob.jpeg" alt="">
+                                                    </span>
+                                                </td>
+                                                <td class="name" >Spongebob Squarepants</td>
+                                                <td>11/01/2022</td>
+                                                <td>$ 300</td>
+                                                <td class="text-success">completed</td>
+                                            </tr>
+                                            <!-- Squidward -->
+                                            <tr title="Squidward Tentacles">
+                                                <td>
+                                                    <span>
+                                                        <img src="./assets/images/squidward.png" alt="">
+                                                    </span>
+                                                </td>
+                                                <td class="name" >Squidward Tentacles</td>
+                                                <td>10/01/2022</td>
+                                                <td>$ 150</td>
+                                                <td class="text-success">completed</td>
+                                            </tr>
+                                            <!-- gary -->
+                                            <tr title="Garold Wilson">
+                                                <td>
+                                                    <span>
+                                                        <img src="./assets/images/gary.jpg" alt="">
+                                                    </span>
+                                                </td>
+                                                <td class="name" >Garold Wilson</td>
+                                                <td>09/01/2022</td>
+                                                <td>$ 35432</td>
+                                                <td class="text-success" >completed</td>
+                                            </tr>
+                                            <!-- mr krabs-->
+                                            <tr title="Eugene Harold Krabs">
+                                                <td>
+                                                    <span>
+                                                        <img src="./assets/images/krabs.jpg" alt="">
+                                                    </span>
+                                                </td>
+                                                <td class="name" >Eugene Harold Krabs</td>
+                                                <td>01/01/2022</td>
+                                                <td>$ 600125000</td>
+                                                <td class="text-warning">pending</td>
+                                            </tr>
+                                            <!-- Plankton-->
+                                            <tr title="꧁༒☬_sheLdon_J_pLanKton_☬༒꧂">
+                                                <td>
+                                                    <span>
+                                                        <img src="./assets/images/plankton.png" alt="">
+                                                    </span>
+                                                </td>
+                                                <td class="name" >꧁༒☬_sheLdon_J_pLanKton_☬༒꧂</td>
+                                                <td>13/03/2002</td>
+                                                <td>$ 1.5</td>
+                                                <td class="text-danger">failed</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TRANSACTION HISTORY END-->
+
+
+                        </div>
+                        <!--- STATS COLUMN END-->
+
+                        <!-- RECENTS COLUMN START-->
+                        <div class="col-lg-12 col-xl-4 col-md-12">
+                            <div class="container-fluid">
+
+                                <!-- Credit card start-->
+                                <div class="row ccSection">
+                                    <div class="col">
+                                        <div class="ccCard shadow">
+                                            <div class="cardName m-3">
+                                                <h5>master card</h5>
+                                            </div>
+                                            <div class="cardNum m-3">
+                                                <h4>5105 1051 0510 5100</h4>
+                                            </div>
+                                            <div class="row m-1">
+                                                <div class="col">
+                                                    <div class="cardHolder mt-2 mb-2">
+                                                        <h5>Patrick Sea-Star</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-end">
+                                                    <i class="lab la-cc-mastercard" style="font-size: 3rem;"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Credit card end-->
+
+                                <!-- recent activities start-->
+                                <div class="row raSection mt-4">
+                                    <div class="header">
+                                        <h3>Recent activities</h3>
+                                        <p>11 JANUARY 2022</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div class="container">
+                                                <div class="wrapper shadow">
+                                                    <div class="icon">
+                                                        <i class="las la-tint"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h3>Water bill</h3>
+                                                        <p class="successful">Succesful</p>
+                                                    </div>
+                                                    <div class="amount">
+                                                        <p>$ 150</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="container">
+                                                <div class="wrapper shadow">
+                                                    <div class="icon">
+                                                        <i class="las la-bolt"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h3>Electric bill</h3>
+                                                        <p class="successful">Succesful</p>
+                                                    </div>
+                                                    <div class="amount">
+                                                        <p>$ 200</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="container">
+                                                <div class="wrapper shadow">
+                                                    <div class="icon">
+                                                        <i class="las la-money-check"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h3>Income salary</h3>
+                                                        <p class="successful">Succesful</p>
+                                                    </div>
+                                                    <div class="amount">
+                                                        <p>$ 1200</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="container">
+                                                <div class="wrapper shadow">
+                                                    <div class="icon">
+                                                        <i class="las la-wifi"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h3>Internet bill</h3>
+                                                        <p class="successful">Succesful</p>
+                                                    </div>
+                                                    <div class="amount">
+                                                        <p>$ 90</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- recent activities end-->
+                                
+                                <!-- uses the same classes as recent activities-->
+                                <!-- upcoming payments start-->
+                                <div class="row raSection mt-4">
+                                    <div class="header">
+                                        <h3>Upcoming payments</h3>
+                                        <p>23 JANUARY 2022</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div class="container">
+                                                <div class="wrapper shadow">
+                                                    <div class="icon">
+                                                        <i class="las la-home"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h3>House rent</h3>
+                                                        <p class="pendings" >Pending</p>
+                                                    </div>
+                                                    <div class="amount">
+                                                        <p>$ 1800</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="container">
+                                                <div class="wrapper shadow">
+                                                    <div class="icon">
+                                                        <i class="las la-car"></i>
+                                                    </div>
+                                                    <div class="details">
+                                                        <h3>Car insurance</h3>
+                                                        <p class="pendings" >Pending</p>
+                                                    </div>
+                                                    <div class="amount">
+                                                        <p>$ 190</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- upcoming payments end-->
+
+                        <!-- RECENTS COLUMN END-->
+
+                    </div>
+                </div>
+              </section>
+        </div>
+    </div>
+    <!-- MAIN CONTENT END-->
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/Chart.js" ></script>
+</body>
+</html>
